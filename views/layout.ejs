@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora | <%=namePage %> </title>
+</head>
+<body>
+    <h1>Calculadora Unipanamericana RMI</h1>
+    <form action="/layout" method="post">
+        <label for="Numero1">Numero 1</label>
+        <input type="text" name="numero1" id="">
+        <label for="Numero2">Numero 2</label>
+        <input type="text" name="numero2" id="">
+        <select name="operacion" id="">
+            <option value="" selected disabled>--operation--</option>
+            <option value="suma">suma</option>
+            <option value="resta">resta</option>
+            <option value="mul">multiplicacion</option>
+            <option value="div">division</option>
+        </select>
+        <button type="submit">Enviar</button>
+    </form>
+    <div>
+        <% if(resultado){ %>
+            <h1>el resultado de la operacion es <%= resultado %> </h1>
+        <% } %> 
+    </div>
+</body>
+</html>
